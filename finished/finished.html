@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>A Quick Tutorial for CSS Grid</title>
+    <style>
+    .container>div{
+        border: 3px solid grey;
+        padding: 20px 0;
+    }
+
+    .container {
+        display: grid;
+        /* define a grid template by setting the names of the grid area which specified with grid-area property */
+        grid-template-areas: "header header header header"
+                             "main main main sidebar"
+                             "footer footer footer footer";
+    }
+    .header {
+        background-color:skyblue;
+        grid-area: header;
+    }
+    .main {
+        background-color: yellow;
+        grid-area: main;
+    }
+    .sidebar {
+        background-color: green;
+        grid-area: sidebar;
+    }
+    .footer {
+        background-color: red;
+        grid-area: footer;
+    }
+    </style>
+</head>
+<body>
+    <h1>A Quick Tutorial for  CSS Grid</h1>
+    <div class="container">
+        <div class="header">Header</div>
+        <div class="main">Main</div>
+        <div class="sidebar">Side Bar</div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>
